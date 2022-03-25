@@ -1,0 +1,134 @@
+.grid {
+    margin-top: 48px;
+    height: auto;
+    width: 1304px;
+
+    .results {
+        font-size: 15px;
+        color: $parClr;
+        margin-bottom: 16px;
+    }
+
+    .grid-cards {
+        width: 1304px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .card {
+        height: 283px;
+        width: 317px;
+        background-color: $cardClr;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        .avatar-border {
+            height: 136px;
+            width: 136px;
+            border-radius: 68px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            background-color: $classClr;
+        }
+        .avatar {
+            height: 128px;
+            width: 128px;
+            border-radius: 64px;
+            background-image: url("../hermonie.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .name {
+            margin-top: 20px;
+            margin-bottom: 16px;
+            font-size: 20px;
+            color: $cardName;
+            font-weight: bold;
+        }
+
+        .house {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 9px;
+
+            .house-color {
+                background-color: $griffClr;
+                height: 16px;
+                width: 16px;
+                border-radius: 4px;
+                margin-right: 4px;
+            }
+
+            .house-name {
+                font-size: 15px;
+                color: $textCardClr;
+                margin-left: 4px;
+                width: 76px;
+                text-align: left;
+            }
+        }
+
+        .birth {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .birth-icon {
+                height: 16px;
+                width: 16px;
+                margin-right: 4px;
+            }
+
+            .birth-text {
+                font-size: 15px;
+                color: $textCardClr;
+                margin-left: 4px;
+                width: 76px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1340px) {
+    .grid {
+        width: 100% !important;
+    }
+
+    .grid-cards {
+        width: 100% !important;
+        justify-content: space-around !important;
+    }
+
+    .results {
+        width: 100% !important;
+        padding: 0px 24px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .grid-cards {
+        justify-content: space-around !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .results {
+        position: relative !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px !important;
+        text-align: center;
+    }
+}

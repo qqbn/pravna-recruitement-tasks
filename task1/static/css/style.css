@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+.filters {
+  width: 1316px;
+  height: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 32px;
+}
+
+.filters input,
+.filters select {
+  border-radius: 8px;
+  border: 1px solid #ced6e0;
+  padding: 0px 24px;
+  font-size: 15px;
+  outline: none;
+  margin-right: 16px;
+  background-color: white;
+  color: #747d8c;
+}
+
+.filters input::-webkit-input-placeholder {
+  color: #747d8c;
+}
+
+.filters input:-ms-input-placeholder {
+  color: #747d8c;
+}
+
+.filters input::-ms-input-placeholder {
+  color: #747d8c;
+}
+
+.filters input::placeholder {
+  color: #747d8c;
+}
+
+.filters input[type="text"] {
+  width: 428px;
+  height: 100%;
+}
+
+.filters select {
+  width: 317px;
+  height: 100%;
+}
+
+.filters .buttons {
+  height: 100%;
+  width: 206px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filters .search-btn,
+.filters .clear-btn {
+  width: 101px;
+  height: 100%;
+  background-color: #946b2d;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filters .search-btn img,
+.filters .clear-btn img {
+  height: 24px;
+  width: 24px;
+}
+
+.filters .clear-btn {
+  background-color: #ced6e0;
+}
+
+@media only screen and (max-width: 1337px) {
+  .filters {
+    width: 100%;
+    height: 49px !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0px 20px !important;
+  }
+  input,
+  select {
+    margin-bottom: 20px;
+    margin: 0;
+  }
+  input {
+    width: 40%;
+  }
+  select {
+    width: 20%;
+  }
+  .buttons {
+    width: 20%;
+  }
+  .buttons .clear-btn {
+    width: 45%;
+  }
+  .buttons .search-btn {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .filters {
+    height: auto !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 0px !important;
+  }
+  input,
+  select {
+    height: 49px !important;
+    margin-bottom: 20px;
+    margin-right: 0px !important;
+  }
+  .buttons {
+    height: 49px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  input {
+    width: 90% !important;
+  }
+  select {
+    width: 90% !important;
+  }
+}
+
+.grid {
+  margin-top: 48px;
+  height: auto;
+  width: 1304px;
+}
+
+.grid .results {
+  font-size: 15px;
+  color: #a4b0be;
+  margin-bottom: 16px;
+}
+
+.grid .grid-cards {
+  width: 1304px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid .card {
+  height: 283px;
+  width: 317px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.grid .card .avatar-border {
+  height: 136px;
+  width: 136px;
+  border-radius: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background-color: #740001;
+}
+
+.grid .card .avatar {
+  height: 128px;
+  width: 128px;
+  border-radius: 64px;
+  background-image: url("../hermonie.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid .card .name {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #2f3542;
+  font-weight: bold;
+}
+
+.grid .card .house {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 9px;
+}
+
+.grid .card .house .house-color {
+  background-color: #740001;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.grid .card .house .house-name {
+  font-size: 15px;
+  color: #57606f;
+  margin-left: 4px;
+  width: 76px;
+  text-align: left;
+}
+
+.grid .card .birth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grid .card .birth .birth-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.grid .card .birth .birth-text {
+  font-size: 15px;
+  color: #57606f;
+  margin-left: 4px;
+  width: 76px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1340px) {
+  .grid {
+    width: 100% !important;
+  }
+  .grid-cards {
+    width: 100% !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+  .results {
+    width: 100% !important;
+    padding: 0px 24px;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .grid-cards {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .results {
+    position: relative !important;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 250px !important;
+    text-align: center;
+  }
+}
+
+.header {
+  width: 687px;
+  height: auto;
+  margin-top: 120px;
+  color: #57606f;
+}
+
+.header h1 {
+  width: 100%;
+  height: 72px;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.header h6 {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 730px) {
+  .header {
+    width: 100%;
+  }
+  h1 {
+    height: auto;
+    font-size: 54px !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  h1 {
+    height: auto !important;
+    font-size: 36px !important;
+  }
+  h6 {
+    font-size: 18px !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  h1 {
+    font-size: 32px !important;
+  }
+  h6 {
+    font-size: 16px !important;
+    margin-top: 0px !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #f9f8f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=style.css.map */
