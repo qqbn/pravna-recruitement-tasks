@@ -30,7 +30,7 @@ export default {
 .grid {
     margin-top: 48px;
     height: auto;
-    width: 1304px;
+    width: 1304px !important;
 
     .results {
         font-size: 15px;
@@ -42,7 +42,8 @@ export default {
         width: 1304px;
         height: auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        gap: 0px 12px;
         flex-wrap: wrap;
         align-items: center;
     }

@@ -45,6 +45,9 @@ export default {};
 }
 
 @media only screen and (max-width: 620px) {
+    .header {
+        margin-top: 80px !important;
+    }
     h1 {
         height: auto !important;
         font-size: 36px !important;

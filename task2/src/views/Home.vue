@@ -10,7 +10,7 @@
 // @ is an alias to /src
 import Headers from "@/components/Headers.vue";
 import Filters from "@/components/Filters.vue";
-import Grid from "../components/Grid.vue";
+import Grid from "@/components/Grid.vue";
 
 export default {
     name: "Home",
@@ -21,6 +21,8 @@ export default {
     },
 };
 </script>
+
+
 <style lang="scss" scoped>
 .container {
     height: 100%;

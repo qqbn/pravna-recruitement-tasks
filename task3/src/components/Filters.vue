@@ -56,7 +56,8 @@ export default {
             ],
             selectedCharacter: "Wszystkie postaci", //aktualnie wybrany filter postaci
             selectedHouse: "Wszystkie domy", //aktualnie wybrany filter domu
-            inputText: "", //zmienna służąca do wyszukiwania po tekśćie
+            inputText: "", //zmienna służąca do wyszukiwania po imieniu i nazwisku
+            lsKey: "filters",
         };
     },
 
@@ -75,7 +76,6 @@ export default {
             if (this.selectedHouse != "Wszystkie domy") {
                 //jeżeli został wybrany filtr inny niż 'Wszystkie domy' zostaje wywołana funkcja filtrująca po domach postaci oraz
                 tmpCharacters = this.filterByHouse(tmpCharacters); //w LocalStorage zostaje zapisany użyty filtr
-                this.setLS();
             }
 
             if (this.selectedCharacter != "Wszystkie postaci") {
@@ -90,10 +90,8 @@ export default {
                         tmpCharacters = this.filterByStaff(tmpCharacters);
                         break;
                 }
-                this.setLS();
             }
-
-            console.log(tmpCharacters);
+            this.setLS();
             this.setDisplay(tmpCharacters); //wywołanie mutacji z vuex store aby, zaktualizować wyświetlaną tablicę postaci
         },
 
@@ -143,7 +141,7 @@ export default {
                 characters: this.selectedCharacter,
                 houses: this.selectedHouse,
             };
-            localStorage.setItem("filters", JSON.stringify(filters));
+            localStorage.setItem(this.lsKey, JSON.stringify(filters));
         },
     },
 
@@ -168,8 +166,8 @@ export default {
 
     mounted() {
         //na starcie aplikacji, zostają pobrane filtry z localstorage
-        if (localStorage.getItem("filters")) {
-            let filters = JSON.parse(localStorage.getItem("filters"));
+        if (localStorage.getItem(this.lsKey)) {
+            let filters = JSON.parse(localStorage.getItem(this.lsKey));
             this.selectedHouse = filters.houses;
             this.selectedCharacter = filters.characters;
         }
