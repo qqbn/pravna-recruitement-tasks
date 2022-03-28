@@ -57,6 +57,7 @@ export default {
     .grid-cards {
         width: 100% !important;
         justify-content: space-around !important;
+        gap: 0px 0px !important;
     }
 
     .results {
