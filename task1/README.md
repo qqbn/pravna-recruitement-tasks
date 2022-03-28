@@ -2,6 +2,5 @@
 
 ## Słowa wstępu
 
-```
-Strona ta posiada style napisane w scss. Wszystkie pliki scss znajdują się w folderze scss a kompilowane są do folderu /static/css. Strona jest również responsywna dla każdego urządzenia powyżej 320px szerkości.
-```
+Strona ta jest odwzorowaniem otrzymanego prototypu. Posiada style napisane w SCSS. Wszystkie pliki SCSS znajdują się w folderze SCSS a kompilowane są do folderu /static/css. Strona jest również responsywna dla każdego urządzenia powyżej 320px szerkości.
+
