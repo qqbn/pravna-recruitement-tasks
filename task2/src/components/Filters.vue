@@ -1,3 +1,32 @@
+<template>
+    <div class="filters">
+        <input type="text" placeholder="Wyszukaj po imieniu i nazwisku" />
+        <select>
+            <option value="Wszystkie postaci" disabled selected>
+                Wszystkie postaci
+            </option>
+        </select>
+        <select>
+            <option value="Wszystkie domy" disabled selected>
+                Wszystkie domy
+            </option>
+        </select>
+        <div class="buttons">
+            <button class="search-btn">
+                <img src="@/assets/icon-search.svg" alt="icon" />
+            </button>
+            <button class="clear-btn">
+                <img src="@/assets/icon-clear.svg" alt="icon" />
+            </button>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss" scoped>
 .filters {
     width: 1316px;
     height: 49px;
@@ -30,7 +59,6 @@
     select {
         width: 317px;
         height: 100%;
-        // color: $selectFontClr;
         appearance: none;
         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points="0,0 100,0 50, 50" style="fill:%23CED6E0;" /></svg>');
         background-position: right 24px top 50%;
@@ -124,3 +152,4 @@
         width: 90% !important;
     }
 }
+</style>
