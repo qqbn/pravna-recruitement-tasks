@@ -41,7 +41,7 @@ export default {
     data() {
         return {
             charactersOptions: [
-                //tablica dostępnych opcji dla filtru postci
+                //tablica dostępnych opcji dla filtru postaci
                 "Wszystkie postaci",
                 "Uczniowie",
                 "Kadra nauczycielska",
@@ -66,7 +66,7 @@ export default {
 
         filterCharacters() {
             //funkcja filtrująca postacie, w zależności od użytych filtrów. funkcja wykorzustuje tymaczsową tablicę, a następnie zawęża wyniki, w zależności od wybranych filtrów
-            let tmpCharacters = this.$store.state.allCharacters; //przypisanie stanu 'allCharacters' do zmiennej pomocniczej
+            let tmpCharacters = this.$store.state.allCharacters; //przypisanie stanu tablicy 'allCharacters' do zmiennej pomocniczej
 
             if (this.inputText.length >= 3) {
                 //jeżeli tekst wprowadzony w inpucie jest większy lub równy 3, zostaje wywołana funkcja filtrująca po imieniu i naziwsku
@@ -75,13 +75,13 @@ export default {
 
             if (this.selectedHouse != "Wszystkie domy") {
                 //jeżeli został wybrany filtr inny niż 'Wszystkie domy' zostaje wywołana funkcja filtrująca po domach postaci oraz
-                tmpCharacters = this.filterByHouse(tmpCharacters); //w LocalStorage zostaje zapisany użyty filtr
+                tmpCharacters = this.filterByHouse(tmpCharacters);
             }
 
             if (this.selectedCharacter != "Wszystkie postaci") {
                 //jeżeli został wybrany filtr inny niż 'wszystkie postaci', intrukcja switch
                 switch (
-                    this.selectedCharacter //sprawdza jaka opcja została wybrana a następnie zostaje wywołana funkcja filtrująca po danej opcji(uczeń/kadra) oraz w LocalStorage zostaje zapisany użyty filtr
+                    this.selectedCharacter //sprawdza jaka opcja została wybrana a następnie zostaje wywołana funkcja filtrująca po danej opcji(uczeń/kadra)
                 ) {
                     case "Uczniowie":
                         tmpCharacters = this.filterByStudent(tmpCharacters);
@@ -91,7 +91,7 @@ export default {
                         break;
                 }
             }
-            this.setLS();
+            this.setLS(); //zapisanie w LocalStorage, aktualnie wybranych filtrów
             this.setDisplay(tmpCharacters); //wywołanie mutacji z vuex store aby, zaktualizować wyświetlaną tablicę postaci
         },
 
@@ -160,7 +160,7 @@ export default {
 
         displayCharacters: function () {
             //watcher ten sprawdza, moment w którym, zmienan 'allCharacters' w storze vuexa zostanie wypełniona danymi a następnie
-            this.filterCharacters(); //funkcję filtrująca z filtrami zapisanymi w local sotrage
+            this.filterCharacters(); //wywołuje funkcję filtrująca z filtrami zapisanymi w local sotrage
         },
     },
 

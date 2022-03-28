@@ -21,7 +21,7 @@ export default {
         Card,
     },
     computed: {
-        ...mapState(["displayCharacters"]), //pobranie tablicy wyświetlające ze stora by móc wyświetlić postacie
+        ...mapState(["displayCharacters"]), //pobranie tablicy wyświetlającej ze stora by móc wyświetlić postacie
     },
 };
 </script>
