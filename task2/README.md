@@ -2,9 +2,9 @@
 
 ## Słowa wstępu
 
-```
-Aplikacja ta jest napisana w vue na podstawie aplikacji z task1. Wykorzystuje vue router oraz obsługuje scss.
-```
+
+Aplikacja ta jest napisana w Vue na podstawie wyglądu strony z task1. Wykorzystuje vue router oraz obsługuje scss.
+
 
 ## Project setup
 
